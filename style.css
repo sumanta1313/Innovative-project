@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+
+:root{
+    --glow:#00ffee;
+    --second-glow:#62ffa3;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border: 5px solid #333;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.wrapper:hover{
+    border: 5px solid var(--glow);
+    box-shadow: 0 0 20px var(--glow),inset 0 0 20px var(--glow);
+}
+
+#login{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease-in-out;
+}
+
+@keyframes glowText1{
+    0%{
+        filter: drop-shadow(0 0 1px var(--glow));
+    }
+    100%{
+        filter: drop-shadow(0 0 8px var(--glow));
+    }
+}
+
+@keyframes glowText2{
+    0%{
+        filter: drop-shadow(0 0 1px var(--second-glow));
+    }
+    100%{
+        filter: drop-shadow(0 0 8px var(--second-glow));
+    }
+}
+
+.glowing-text{
+    width: 50%;
+    color: white;
+    font-size: 2rem;
+    color: var(--glow);
+}
+
+.glowing-text h1{
+    font-size: 6rem;
+    margin: 15px 0;
+    animation: glowText1 1s alternate infinite;
+}
+
+.glowing-text p{
+    font-size: 1.2rem;
+    color: white;
+}
+
+.glowing-text a{
+    color:#00ffee;
+    text-decoration: underline gray;
+}
+
+
+#register-text h1{
+    font-size: 5.5rem;
+    color: var(--second-glow) !important;
+    animation: glowText2 1s alternate infinite;
+}
+
+#register-text a{
+    color: var(--second-glow) !important;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    transition: .5s;
+    margin-bottom: 50px;
+}
+
+.wrapper:hover h2{
+    color: var(--glow);
+}
+
+.wrapper:hover .reg-h2 h2{
+    color: var(--second-glow);
+}
+
+.input-box input{
+    width: 280px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #333;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    padding: 0 10px 0 35px;
+    transition: .5s;
+    margin: 10px;
+}
+
+.wrapper:hover .input-box input{
+    border: 2px solid var(--glow);
+    box-shadow: 0 0 10px var(--glow),inset 0 0 10px var(--glow);
+}
+
+.input-box input::placeholder{
+    color: rgba(255, 255, 255, 0.568);
+}
+
+.input-box .icon{
+    position: absolute;
+    left: 10px;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 55px;
+    transition: .5s;
+}
+
+.wrapper:hover .input-box .icon{
+    color: var(--glow);
+}
+
+.forgot-pass{
+    margin: 10px 0 13px;
+    margin-left: 13px;
+}
+
+.forgot-pass a{
+    color: white;
+    font-size: .9em;
+    text-decoration: none;
+}
+.forgot-pass a:hover{
+    text-decoration: underline;
+}
+
+button{
+    position: relative;
+    width: 280px;
+    height: 45px;
+    background-color: #333;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    transition: .5s;
+    margin-left: 10px;
+}
+
+.wrapper:hover button{
+    color: black;
+    background-color: var(--glow);
+    box-shadow: 0 0 20px var(--glow);
+}
+
+
+.register-link{
+    font-size: .9rem;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.register-link p{
+    color: white;
+}
+
+.register-link p a{
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.wrapper:hover .register-link p a:hover{
+    color: var(--glow);
+    text-decoration: underline;
+}
+
+i{
+    margin-left: 50px;
+    margin-top: 22px;
+}
+
+#reg-icon{
+    margin-left: 12px;
+}
+
+/*#register{*/
+    /*display: none;*/
+    /*opacity: 0;*/
+    /*z-index: 1;*/
+    /*transition:  all .5s ease-in-out*/
+/*}*/
+
+#register_from{
+    transition: .5s;
+}
+
+#register_from:hover{
+    border: 5px solid var(--second-glow) !important;
+    box-shadow: 0 0 20px var(--second-glow),inset 0 0 10px var(--second-glow) !important;
+}
+
+
+#register h2{
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+/*.input input{
+    width: 280px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #333;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    padding: 0 10px 0 35px;
+    transition: .5s;
+    margin: 10px;
+}*/
+
+#reg-input input{
+    transition: .5s;
+}
+
+
+#reg-input2 input{
+    transition: .5s;
+}
+
+#register_from:hover #reg-input2 input{
+    border: 2px solid var(--second-glow);
+    box-shadow: 0 0 10px var(--second-glow),inset 0 0 10px var(--second-glow);
+}
+
+
+#register_from:hover #reg-input input{
+    border: 2px solid var(--second-glow);
+    box-shadow: 0 0 10px var(--second-glow),inset 0 0 10px var(--second-glow);
+}
+
+#reg-icon i{
+    transition: .5s;
+}
+
+#register_from:hover #reg-icon i{
+    color: var(--second-glow);
+}
+
+
+#register_from:hover button{
+    color: black;
+    background-color: var(--second-glow);
+    box-shadow: 0 0 20px  var(--second-glow);
+}
+
+.wrapper:hover #reg-log p a:hover{
+    color: #62ffa3;
+    text-decoration: underline;
+}
+
+@media (max-width:1000px){
+    .container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container .glowing-text{
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .wrapper{
+        width: 400px;
+    }
+}
+
+@media (max-width:500px){
+    .container .glowing-text{
+        height: auto;
+        padding: 20px;
+    }
+    .wrapper{
+        margin: 20px;
+    }
+    .input-box{
+        margin: 20px 0;
+    }
+    .glowing-text h1{
+        font-size:  4rem !important;
+        margin: 0;
+    }
+    .glowing-text p{
+        font-size: 1rem;
+    }
+    .wrapper{
+        width: 90%;
+    }
+    .input-box{
+        width: 100%;
+    }
+}

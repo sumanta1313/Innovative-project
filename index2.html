@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragister page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!--Register page-->
+
+    <div class="container" id="register">
+        <div class="glowing-text" id="register-text">
+            <h1>Register</h1>
+            <p>Have an account ? <a href="index.html" id="Login_link">Login</a> </p>
+        </div>
+        <div class="wrapper" id="register_from">
+            <form action="" class="from">
+                <span class="reg-h2"> <h2>Register</h2> </span>
+
+                <div class="input-box" id="reg-input">
+                    <span class="icon" id="reg-icon">
+                        <ion-icon name="person"></ion-icon>
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <input class="input" type="text" placeholder="Username" required>
+                </div>
+
+                <div class="input-box" id="reg-input2">
+                    <span class="icon" id="reg-icon">
+                        <ion-icon name="number"></ion-icon>
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <input class="input" type="number" placeholder="Number" required>
+                </div>
+
+                <div class="input-box" id="reg-input">
+                    <span class="icon" id="reg-icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+                    <input class="input" type="password" placeholder="Password" required>
+                </div>
+
+                <div class="forgot-pass">
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button class="reg-but" type="submit">Register</button>
+                <div class="register-link" id="reg-log">
+                    <p>Don't have any account ? <a href="index.html" id="register-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
