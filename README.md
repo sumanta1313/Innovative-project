@@ -1,2 +1,2 @@
 # Innovative-project
-Glowing login form
+Glowing login & registration form
